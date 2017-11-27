@@ -1,6 +1,7 @@
 require './app/app'
 require 'capybara'
 require 'capybara/rspec'
+require './spec/features/web_helpers'
 
 Capybara.app = App
 

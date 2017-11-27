@@ -11,6 +11,11 @@ class App < Sinatra::Base
   end
 
   post '/spaces' do
+    Space.create(
+      title: params[:title],
+      description: params[:description],
+      price: params[:price].to_i
+    )
     redirect '/spaces'
   end
 

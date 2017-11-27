@@ -8,7 +8,6 @@ class Space
   property :title, String
   property :description, Text
   property :price, Integer
-
 end
 
 DataMapper.setup(:default, 'postgres://localhost/nightmairbnb_test')

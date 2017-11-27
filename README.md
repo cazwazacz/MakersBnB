@@ -21,11 +21,23 @@ As a guest
 So I don't waste my time
 I want to see which spaces are already booked
 ```
+Space CRC card:
+
+| Spaces      |           |   
+| ------------- |:-------------:|
+| Responsibilities:      | Collaborators: |  
+| - Has title      | -     |    
+| - Has description | -     |    
+| - Has price |      - |
+| - Has availability |   -   |
+
 
 Technology used:
-HTML
-CSS
-jQuery
-Sinatra
-Postgres
-DataMapper
+- HTML
+- CSS
+- jQuery
+- Sinatra
+- Postgres
+- DataMapper
+
+NightmAirbnb was created by Allan, Antonio, Gabriela and Peter.

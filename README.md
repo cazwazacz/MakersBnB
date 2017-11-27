@@ -5,6 +5,10 @@ User stories
 ---
 
 ```
+As a user
+So that I can list or book a space
+I want to choose to be a host or a guest
+
 As a host
 So I can make money from my spare room
 I want to be able to list a space

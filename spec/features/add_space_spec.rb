@@ -8,4 +8,13 @@ feature 'Allow user to add a new space' do
     expect(page).to have_button('Add space')
   end
 
+  scenario 'Submitting "add new space" form redirects to show spaces' do
+    visit('/spaces/new')
+    fill_in('title', with: 'new house')
+    fill_in('description', with: 'humble abode')
+    fill_in('price', with: '1000')
+    click_button('Add space')
+    expect(page).to have_content('Spaces')
+  end
+
 end

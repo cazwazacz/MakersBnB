@@ -9,5 +9,14 @@ class App < Sinatra::Base
     erb :'spaces/new'
   end
 
+  post '/spaces' do
+    redirect '/spaces'
+  end
+
+  get '/spaces' do
+    'Spaces'
+  end
+
   run! if app_file == $PROGRAM_NAME
+
 end

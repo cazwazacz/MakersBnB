@@ -21,3 +21,11 @@ As a guest
 So I don't waste my time
 I want to see which spaces are already booked
 ```
+
+Technology used:
+HTML
+CSS
+jQuery
+Sinatra
+Postgres
+DataMapper

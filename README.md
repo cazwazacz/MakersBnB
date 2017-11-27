@@ -15,7 +15,7 @@ I want to be able to list a space
 
 As a guest
 So I can see places to stay
-I want to see all available listings
+I want to see all available spaces
 
 As a guest
 So that I can stay somewhere

@@ -7,6 +7,6 @@ feature 'Allowing user to choose to list or book' do
   scenario 'Choosing to list' do
     visit '/'
     click_link('list-link')
-    expect(page.current_path).to eq('/listings/new')
+    expect(page.current_path).to eq('/spaces/new')
   end
 end

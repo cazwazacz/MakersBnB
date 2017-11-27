@@ -1,4 +1,5 @@
 require 'sinatra/base'
+require './app/models/space'
 
 class App < Sinatra::Base
   get '/' do

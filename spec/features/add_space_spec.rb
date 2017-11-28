@@ -8,11 +8,11 @@ feature 'Allow user to add a new space' do
   end
 
   scenario 'Submitting "add new space" form redirects to show spaces' do
-    create_space
+    create_space('Hogwarts', 'Edinburgh', 2000)
     expect(page).to have_content('Spaces')
   end
 
   scenario 'Submitting new space form adds it to the database' do
-    expect { create_space }.to change { Space.all.length }.by(1)
+    expect { create_space('Hogwarts', 'Edinburgh', 2000) }.to change { Space.all.length }.by(1)
   end
 end

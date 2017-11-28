@@ -1,7 +1,7 @@
-def create_space
+def create_space(title, description, price)
   visit('/spaces/new')
-  fill_in('title', with: 'new house')
-  fill_in('description', with: 'humble abode')
-  fill_in('price', with: '1000')
+  fill_in('title', with: title)
+  fill_in('description', with: description)
+  fill_in('price', with: price)
   click_button('Add space')
 end

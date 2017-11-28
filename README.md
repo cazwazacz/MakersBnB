@@ -24,6 +24,10 @@ I want to book a space
 As a guest
 So I don't waste my time
 I want to see which spaces are already booked
+
+As a system administrator
+So that I keep track of bookings
+I would like them to be stored in a database
 ```
 Space CRC card:
 

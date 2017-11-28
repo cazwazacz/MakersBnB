@@ -1,5 +1,5 @@
 require 'sinatra/base'
-require './app/models/space'
+require './app/data_mapper_setup'
 
 class App < Sinatra::Base
   get '/' do

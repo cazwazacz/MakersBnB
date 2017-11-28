@@ -16,4 +16,11 @@ feature 'Viewing all spaces' do
     visit '/spaces'
     expect(page).not_to have_button('Book')
   end
+
+  scenario 'Display "unavailable" when a space is booked' do
+    create_space('Hogwarts', 'A lovely old castle in Edinburgh', 2000)
+    click_button('Book')
+    visit '/spaces'
+    expect(page).to have_content('Unavailable')
+  end
 end

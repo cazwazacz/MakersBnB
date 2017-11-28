@@ -9,10 +9,12 @@
       <em>
         <%= space.description%>
       </em>
-        £<%= space.price %>
-        <%if space.available?%>
-          <button class="book-button" id="<%=space.id%>" type="button">Book</button>
-        <%end%>
+      £<%= space.price %>
+      <%if space.available?%>
+        <button class="book-button" id="<%=space.id%>" type="button">Book</button>
+      <%else%>
+        Unavailable
+      <%end%>
     </li>
   <% end %>
 </ul>

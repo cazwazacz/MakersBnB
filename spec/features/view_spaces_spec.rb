@@ -9,4 +9,11 @@ feature 'Viewing all spaces' do
     expect(page.text).to include('Taj Mahal', 'The best casino in Las Vegas', '982380')
     expect(page.text).to include('Dracula Castle', 'Have extra blood? Come to Transylvania!', '4')
   end
+
+  scenario 'Hiding the book button when space is not available' do
+    create_space('Hogwarts', 'A lovely old castle in Edinburgh', 2000)
+    click_button('Book')
+    visit '/spaces'
+    expect(page).not_to have_button('Book')
+  end
 end

@@ -2,6 +2,17 @@
 
 <ul>
   <% @spaces.each do |space| %>
-  <li><strong><%= space.title %></strong> <em><%= space.description%></em> £<%= space.price %> <button class="book-button" id="<%=space.id%>" type="button">Book</button> </li>
+    <li>
+      <strong>
+        <%= space.title %>
+      </strong>
+      <em>
+        <%= space.description%>
+      </em>
+        £<%= space.price %>
+        <%if space.available?%>
+          <button class="book-button" id="<%=space.id%>" type="button">Book</button>
+        <%end%>
+    </li>
   <% end %>
 </ul>

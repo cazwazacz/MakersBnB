@@ -5,4 +5,9 @@ class Space
   property :title, String
   property :description, Text
   property :price, Integer
+  property :available?, Boolean, :default => true
+
+  def toggle_availability
+    self.update(available: !self.available?)
+  end
 end

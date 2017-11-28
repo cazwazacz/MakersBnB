@@ -2,11 +2,13 @@ ENV['RACK_ENV'] ||= 'test'
 
 require './app/app'
 require 'capybara'
+require 'capybara/poltergeist'
 require 'capybara/rspec'
 require 'database_cleaner'
 require './spec/features/web_helpers'
 
 Capybara.app = App
+Capybara.default_driver = :poltergeist
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
@@ -28,5 +30,5 @@ RSpec.configure do |config|
   config.append_after(:each) do
     DatabaseCleaner.clean
   end
-  
+
 end

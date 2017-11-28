@@ -2,6 +2,6 @@
 
 <ul>
   <% @spaces.each do |space| %>
-  <li><strong><%= space.title %></strong> <em><%= space.description%></em> £<%= space.price %></li>
+  <li><strong><%= space.title %></strong> <em><%= space.description%></em> £<%= space.price %> <button class="book-button" id="button-<%=space.id%>" type="button">Book</button> </li>
   <% end %>
 </ul>

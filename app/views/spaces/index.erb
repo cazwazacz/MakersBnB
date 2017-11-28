@@ -12,6 +12,8 @@
       £<%= space.price %>
       <%if space.available?%>
         <button class="book-button" id="<%=space.id%>" type="button">Book</button>
+        <span id="span-<%=space.id%>">
+        </span>
       <%else%>
         Unavailable
       <%end%>

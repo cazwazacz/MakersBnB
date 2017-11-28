@@ -11,6 +11,6 @@ gem 'sinatra'
 group :test do
   gem 'capybara'
   gem 'database_cleaner'
+  gem 'poltergeist'
   gem 'rspec'
-  gem 'selenium-webdriver'
 end

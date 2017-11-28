@@ -22,7 +22,8 @@ class App < Sinatra::Base
   end
 
   get '/spaces' do
-    'Spaces'
+    @spaces = Space.all
+    erb :'spaces/index'
   end
 
   run! if app_file == $PROGRAM_NAME

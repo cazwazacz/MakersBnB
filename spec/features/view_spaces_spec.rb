@@ -20,6 +20,7 @@ feature 'Viewing all spaces' do
   scenario 'Display "unavailable" when a space is booked' do
     create_space('Hogwarts', 'A lovely old castle in Edinburgh', 2000)
     click_button('Book')
+    sleep 1
     visit '/spaces'
     expect(page).to have_content('Unavailable')
   end

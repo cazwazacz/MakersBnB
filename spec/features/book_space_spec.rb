@@ -8,9 +8,4 @@ feature 'Allowing a user to make a booking' do
     create_space_and_book
     expect(page).not_to have_button('Book')
   end
-
-  scenario 'When booking, available is changed to false' do
-    create_space_and_book
-    expect(Space.last.available?).to be false
-  end
 end

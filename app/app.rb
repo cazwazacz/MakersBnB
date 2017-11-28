@@ -24,6 +24,7 @@ class App < Sinatra::Base
   post '/spaces/:id/update_availability' do
     space = Space.get(params[:id])
     space.toggle_availability
+    200
   end
 
   get '/spaces' do

@@ -8,4 +8,9 @@ feature 'Allowing a user to make a booking' do
     click_button('Book')
     expect(page).not_to have_button('Book')
   end
+  scenario 'When booking, available is changed to false' do
+    create_space('Hogwarts', 'A lovely old castle in Edinburgh', 2000)
+    click_button('Book')
+    expect(Space.last.available?).to be false
+  end
 end

@@ -21,6 +21,11 @@ class App < Sinatra::Base
     redirect '/spaces'
   end
 
+  post '/spaces/:id/update_availability' do
+    space = Space.get(params[:id])
+    space.toggle_availability
+  end
+
   get '/spaces' do
     @spaces = Space.all
     erb :'spaces/index'

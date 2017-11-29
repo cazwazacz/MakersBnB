@@ -141,6 +141,8 @@ GEM
       rack (~> 2.0)
       rack-protection (= 2.0.0)
       tilt (~> 2.0)
+    sinatra-flash (0.3.0)
+      sinatra (>= 1.0.0)
     stringex (1.5.1)
     temple (0.8.0)
     thread_safe (0.3.6)
@@ -159,18 +161,21 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bcrypt
   capybara
   carrierwave
   carrierwave-datamapper
   data_mapper
   database_cleaner
   dm-postgres-adapter
+  dm-validations
   haml
   poltergeist
   rake
   rspec
   rubocop
   sinatra
+  sinatra-flash
 
 RUBY VERSION
    ruby 2.4.0p0

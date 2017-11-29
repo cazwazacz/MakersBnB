@@ -65,8 +65,6 @@ class App < Sinatra::Base
       @new_user.errors.each do |error|
         flash.next[:error] = error[0]
       end
-      # p @new_user.errors[0][0]
-      # flash.next[:hello] = 'hello'
       redirect '/users/new'
     end
   end

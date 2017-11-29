@@ -7,6 +7,9 @@ gem 'dm-postgres-adapter'
 gem 'rake'
 gem 'rubocop'
 gem 'sinatra'
+gem 'carrierwave'
+gem 'carrierwave-datamapper'
+gem 'haml'
 
 group :test do
   gem 'capybara'

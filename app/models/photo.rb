@@ -6,6 +6,6 @@ class Photo
   property :image, String, :auto_validation => false
   mount_uploader :image, ImagesUploader
 
-  has n, :spaces, through: Resource
+  belongs_to :space
 
 end

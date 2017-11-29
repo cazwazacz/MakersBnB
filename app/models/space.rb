@@ -7,7 +7,7 @@ class Space
   property :price, Integer
   property :available?, Boolean, :default => true
 
-  has n, :photos, through: Resource
+  has n, :photos
 
   def toggle_availability
     self.update(available: !self.available?)

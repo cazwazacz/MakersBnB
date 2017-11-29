@@ -27,19 +27,13 @@ class App < Sinatra::Base
       description: params[:description],
       price: params[:price].to_i
     )
-
     space.save
-
     img = Photo.create(
       image: params[:image]
     )
-
     img.save
-
     space.photos << img
-
     space.save
-
     redirect '/spaces'
   end
 

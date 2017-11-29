@@ -1,27 +1,9 @@
 <h1>Spaces</h1>
 
-<input type="text", placeholder="enter max price" />
+<input id="max-price" type="text", placeholder="enter max price" />
 <button class="filter-button" type="button">Filter</button>
 
-<div class="item-list">
-  <ul>
-    <% @spaces.each do |space| %>
-    <li>
-      <strong>
-        <%= space.title %>
-      </strong>
-      <em>
-        <%= space.description%>
-      </em>
-      £<%= space.price %>
-      <%if space.available?%>
-      <button class="book-button" id="<%=space.id%>" type="button">Book</button>
-      <span id="span-<%=space.id%>">
-      </span>
-      <%else%>
-      Unavailable
-      <%end%>
-    </li>
-    <% end %>
-  </ul>
+<div id="item-list">
+  <div id="info">
+  </div>
 </div>

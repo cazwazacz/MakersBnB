@@ -34,5 +34,10 @@ class App < Sinatra::Base
     erb :'spaces/index'
   end
 
+  get '/api/spaces' do
+    content_type :json
+    { info: Space.all }.to_json
+  end
+
   run! if app_file == $PROGRAM_NAME
 end

@@ -8,10 +8,6 @@ CarrierWave.configure do |config|
   config.root = File.dirname(__FILE__) + "/public"
 end
 
-# CarrierWave.configure do |config|
-#   config.root = "/app/public/uploads"
-# end
-
 class App < Sinatra::Base
   get '/' do
     erb :index
@@ -47,16 +43,6 @@ class App < Sinatra::Base
     @photos = Photo.all
     erb :'spaces/index'
   end
-
-  # post '/save_photo' do
-  #   img = Photo.new
-  #   img.file = params[:file]
-  #   img.description = 'This is the caption'
-  #   img.save!
-  #   space.photos << img
-  #   space.save
-  #   redirect 'spaces/index'
-  # end
 
   run! if app_file == $PROGRAM_NAME
 end

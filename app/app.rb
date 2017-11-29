@@ -84,11 +84,13 @@ class App < Sinatra::Base
     else
       @new_user.errors.each do |error|
         flash.next[:error] = error[0]
+      end
     end
     redirect '/users/new'
   end
 
   delete '/sessions' do
+    p 'Hello, world'
     session[:user_id] = nil
     flash.next[:goodbye] = 'Sorry to see you leave :( '\
     'Please come back soon. '\

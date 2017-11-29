@@ -49,11 +49,19 @@ class App < Sinatra::Base
   end
 
   post '/users' do
-    @new_user = User.new(name: params[:name], email: params[:email], username: params[:username])
-    @new_user.password = params[:password]
-    @new_user.save!
-    session[:user_id] = @new_user.id
-    redirect '/'
+    @new_user = User.create(
+      name: params[:name],
+      email: params[:email],
+      username: params[:username],
+      password: params[:password],
+      password_confirmation: params[:password_confirmation]
+    )
+    if @new_user.save
+      session[:user_id] = @new_user.id
+      redirect '/'
+    else
+      redirect '/users/new'
+    end
   end
 
   run! if app_file == $PROGRAM_NAME

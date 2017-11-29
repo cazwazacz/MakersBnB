@@ -31,6 +31,10 @@ As a system administrator
 So that I keep track of bookings
 I would like them to be stored in a database
 
+As a host
+So I can better advertise my space
+I want to upload pictures of my space
+
 As a user
 So I can rent or list my own space
 I want to sign up

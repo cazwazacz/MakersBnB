@@ -49,7 +49,9 @@ class App < Sinatra::Base
   end
 
   post '/users' do
-    @new_user = User.create(name: params[:name], email: params[:email], username: params[:username], password: params[:password])
+    @new_user = User.new(name: params[:name], email: params[:email], username: params[:username])
+    @new_user.password = params[:password]
+    @new_user.save!
     session[:user_id] = @new_user.id
     redirect '/'
   end

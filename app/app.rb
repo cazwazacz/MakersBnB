@@ -4,6 +4,16 @@ require 'sinatra/base'
 require './app/data_mapper_setup'
 
 class App < Sinatra::Base
+  enable :sessions
+  set :session_secret, 'something'
+
+  helpers do
+    def current_user
+      @current_user = User.get(session[:user_id])
+    end
+  end
+
+
   get '/' do
     erb :index
   end
@@ -36,6 +46,12 @@ class App < Sinatra::Base
 
   get '/users/new' do
     erb :'users/new'
+  end
+
+  post '/users' do
+    @new_user = User.create(name: params[:name], email: params[:email], username: params[:username], password: params[:password])
+    session[:user_id] = @new_user.id
+    redirect '/'
   end
 
   run! if app_file == $PROGRAM_NAME

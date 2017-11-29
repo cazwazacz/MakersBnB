@@ -6,4 +6,7 @@ $(document).ready(function() {
       $("#span-"+id).append('Unavailable');
     });
   })
+  $(".filter-button").click(function() {
+    $(".item-list").addClass("test")
+  })
 })

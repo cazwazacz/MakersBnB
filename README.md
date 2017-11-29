@@ -4,6 +4,8 @@
 User stories
 ---
 
+User stories are listed below in the order they were implemented.
+
 ```
 As a user
 So that I can list or book a space
@@ -28,6 +30,18 @@ I want to see which spaces are already booked
 As a system administrator
 So that I keep track of bookings
 I would like them to be stored in a database
+
+As a user
+So I can rent or list my own space
+I want to sign up
+
+As a user
+So other people can't alter my account
+I want to sign out
+
+As a user
+So I can access my bookings and listings
+I want to sign in
 ```
 Space CRC card:
 

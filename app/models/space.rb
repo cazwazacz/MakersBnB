@@ -7,6 +7,7 @@ class Space
   property :price, Integer
   property :available?, Boolean, :default => true
 
+  has n, :photos
   has n, :bookings
 
   def toggle_availability

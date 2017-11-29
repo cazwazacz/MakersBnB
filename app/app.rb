@@ -2,7 +2,12 @@ ENV['RACK_ENV'] ||= 'development'
 
 require 'sinatra/base'
 require 'sinatra/flash'
+require 'carrierwave'
 require './app/data_mapper_setup'
+
+CarrierWave.configure do |config|
+  config.root = File.dirname(__FILE__) + "/public"
+end
 
 class App < Sinatra::Base
   enable :sessions
@@ -25,11 +30,18 @@ class App < Sinatra::Base
   end
 
   post '/spaces' do
-    Space.create(
+    space = Space.create(
       title: params[:title],
       description: params[:description],
       price: params[:price].to_i
     )
+    space.save
+    img = Photo.create(
+      image: params[:image]
+    )
+    img.save
+    space.photos << img
+    space.save
     redirect '/spaces'
   end
 
@@ -43,6 +55,7 @@ class App < Sinatra::Base
 
   get '/spaces' do
     @spaces = Space.all
+    @photos = Photo.all
     erb :'spaces/index'
   end
 

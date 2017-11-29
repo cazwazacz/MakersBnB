@@ -1,11 +1,13 @@
 ENV['RACK_ENV'] ||= 'development'
 
 require 'sinatra/base'
+require 'sinatra/flash'
 require './app/data_mapper_setup'
 
 class App < Sinatra::Base
   enable :sessions
   set :session_secret, 'something'
+  register Sinatra::Flash
 
   helpers do
     def current_user
@@ -60,6 +62,11 @@ class App < Sinatra::Base
       session[:user_id] = @new_user.id
       redirect '/'
     else
+      @new_user.errors.each do |error|
+        flash.next[:error] = error[0]
+      end
+      # p @new_user.errors[0][0]
+      # flash.next[:hello] = 'hello'
       redirect '/users/new'
     end
   end

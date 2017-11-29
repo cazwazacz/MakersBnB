@@ -8,6 +8,7 @@ class Space
   property :available?, Boolean, :default => true
 
   has n, :photos
+  has n, :bookings
 
   def toggle_availability
     self.update(available: !self.available?)

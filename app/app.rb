@@ -36,6 +36,9 @@ class App < Sinatra::Base
   post '/spaces/:id/update_availability' do
     space = Space.get(params[:id])
     space.toggle_availability
+    space.bookings << Booking.create
+    space.save
+    200
   end
 
   get '/spaces' do

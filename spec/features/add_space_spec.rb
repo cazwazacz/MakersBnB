@@ -11,8 +11,4 @@ feature 'Allow user to add a new space' do
     create_space('Hogwarts', 'Edinburgh', 2000)
     expect(page).to have_content('Spaces')
   end
-
-  scenario 'Submitting new space form adds it to the database' do
-    expect { create_space('Hogwarts', 'Edinburgh', 2000) }.to change { Space.all.length }.by(1)
-  end
 end

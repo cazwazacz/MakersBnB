@@ -13,6 +13,7 @@ class App < Sinatra::Base
   enable :sessions
   set :session_secret, 'something'
   register Sinatra::Flash
+  use Rack::MethodOverride
 
   helpers do
     def current_user
@@ -85,6 +86,15 @@ class App < Sinatra::Base
         flash.next[:error] = error[0]
     end
     redirect '/users/new'
+  end
+
+  delete '/sessions' do
+    session[:user_id] = nil
+    flash.next[:goodbye] = 'Sorry to see you leave :( '\
+    'Please come back soon. '\
+    'We miss you. '\
+    'Please.'
+    redirect '/'
   end
 
   run! if app_file == $PROGRAM_NAME

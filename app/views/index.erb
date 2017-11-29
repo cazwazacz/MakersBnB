@@ -1,5 +1,6 @@
 <% if current_user %>
   <h1>Welcome to nightmAirbnb, <%= current_user.name %></h1>
 <% end %>
+<%= flash[:goodbye] %>
 <a id="list-link" href="/spaces/new"><button type="button">List</button></a>
 <a id="book-link" href="/spaces"><button type="button">Book</button></a>

@@ -10,24 +10,24 @@ feature 'Allowing a user to sign up to nightmAirbnb' do
   end
 
   scenario 'User is greeted after signing up' do
-    visit '/users/new'
-    fill_in('name', with: 'Allan')
-    fill_in('email', with: 'allan@gmail.com')
-    fill_in('username', with: 'cazwazacz')
-    fill_in('password', with: 'hello1234')
-    fill_in('password_confirmation', with: 'hello1234')
-    click_button('Sign Up')
+    attempt_sign_up('allan@gmail.com', 'cazwazacz', 'hello1234', 'hello1234')
     expect(page).to have_content('Welcome to nightmAirbnb, Allan')
   end
 
   scenario 'User stays on same page if passwords do not match' do
-    visit '/users/new'
-    fill_in('name', with: 'Allan')
-    fill_in('email', with: 'allan@gmail.com')
-    fill_in('username', with: 'cazwazacz')
-    fill_in('password', with: 'hello1234')
-    fill_in('password_confirmation', with: 'differentpassword')
-    click_button('Sign Up')
+    attempt_sign_up('allan@gmail.com', 'cazwazacz', 'hello1234', 'differentpassword')
+    expect(page.current_path).to eq('/users/new')
+  end
+
+  scenario 'User stays on same page if email is not unique' do
+    attempt_sign_up('allan@gmail.com', 'cazwazacz', 'hello1234', 'hello1234')
+    attempt_sign_up('allan@gmail.com', 'peterwdj', 'hello1234', 'hello1234')
+    expect(page.current_path).to eq('/users/new')
+  end
+
+  scenario 'User stays on same page if email is not unique' do
+    attempt_sign_up('allan@gmail.com', 'cazwazacz', 'hello1234', 'hello1234')
+    attempt_sign_up('peter@gmail.com', 'cazwazacz', 'hello1234', 'hello1234')
     expect(page.current_path).to eq('/users/new')
   end
 end

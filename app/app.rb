@@ -59,6 +59,12 @@ class App < Sinatra::Base
     erb :'spaces/index'
   end
 
+
+  get '/api/spaces' do
+    content_type :json
+    { info: Space.all }.to_json
+  end
+
   get '/users/new' do
     erb :'users/new'
   end
@@ -77,9 +83,8 @@ class App < Sinatra::Base
     else
       @new_user.errors.each do |error|
         flash.next[:error] = error[0]
-      end
-      redirect '/users/new'
     end
+    redirect '/users/new'
   end
 
   run! if app_file == $PROGRAM_NAME

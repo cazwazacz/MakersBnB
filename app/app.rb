@@ -90,7 +90,6 @@ class App < Sinatra::Base
   end
 
   delete '/sessions' do
-    p 'Hello, world'
     session[:user_id] = nil
     flash.next[:goodbye] = 'Sorry to see you leave :( '\
     'Please come back soon. '\

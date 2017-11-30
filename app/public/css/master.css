@@ -80,7 +80,6 @@ html, body, button {
   background-repeat: no-repeat;
   background-position: center;
   background-image: url('/assets/index-background.jpg');
-  background-blend-mode: lighten;
   height: 100%;
   width: 100%;
   display: inline-block;
@@ -99,4 +98,28 @@ html, body, button {
   color: #fff;
   width: 100%;
   margin-bottom: 50px;
+}
+
+#sign-up-background {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url('/assets/sign-up-background.jpg');
+  height: 100%;
+  width: 100%;
+  display: inline-block;
+}
+
+#sign-up-form {
+  text-align: center;
+  display: inline-block;
+  margin: auto;
+  width: 100%;
+}
+
+.sign-up-field {
+  display: block;
+  margin: 40px auto 40px auto;
+  border: 0px;
+  font-size: 2em;
 }

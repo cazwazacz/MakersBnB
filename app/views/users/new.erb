@@ -1,10 +1,14 @@
-<form method="post" action="/users">
-  <input type="text" name="name">
-  <input type="email" name="email">
-  <input type="text" name="username">
-  <input type="password" name="password">
-  <input type="password" name="password_confirmation">
-  <input type="submit" value="Sign Up">
-</form>
+<div id="sign-up-background">
+  <div class="overlay">
+    <form id="sign-up-form" method="post" action="/users">
+      <input class="sign-up-field" type="text" name="name">
+      <input class="sign-up-field" type="email" name="email">
+      <input class="sign-up-field" type="text" name="username">
+      <input class="sign-up-field" type="password" name="password">
+      <input class="sign-up-field" type="password" name="password_confirmation">
+      <input type="submit" value="Sign Up">
+    </form>
+  </div>
+</div>
 
 <%= flash[:error] %>

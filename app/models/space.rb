@@ -5,6 +5,7 @@ class Space
   property :title, String
   property :description, Text
   property :price, Integer
+  property :location, String
   property :available?, Boolean, :default => true
 
   has n, :photos

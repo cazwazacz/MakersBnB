@@ -27,7 +27,11 @@ class App < Sinatra::Base
   end
 
   get '/spaces/new' do
-    erb :'spaces/new'
+    if current_user
+      erb :'spaces/new'
+    else
+      redirect '/sessions/new'
+    end
   end
 
   post '/spaces' do

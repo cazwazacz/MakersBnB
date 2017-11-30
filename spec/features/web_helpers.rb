@@ -21,3 +21,11 @@ def attempt_sign_up(email, username, password, password_confirmation)
   fill_in('password_confirmation', with: password_confirmation)
   click_button('Sign Up')
 end
+
+def sign_up_and_sign_in
+  attempt_sign_up('ga@yahoo.com', 'gaby', '123', '123')
+  visit('/sessions/new')
+  fill_in('username', with: 'gaby')
+  fill_in('password', with: '123')
+  click_button 'Sign In'
+end

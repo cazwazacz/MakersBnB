@@ -11,6 +11,9 @@ class User
   property :username, String
   property :password_hash, Text
 
+  has n, :bookings
+  has n, :spaces
+
   attr_accessor :password_confirmation
 
   validates_confirmation_of :password

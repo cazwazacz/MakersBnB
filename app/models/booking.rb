@@ -4,5 +4,6 @@ class Booking
   property :id, Serial
 
   belongs_to :space
+  belongs_to :user
 
 end

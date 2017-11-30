@@ -27,23 +27,27 @@ class App < Sinatra::Base
   end
 
   get '/spaces/new' do
-    erb :'spaces/new'
+    if current_user
+      erb :'spaces/new'
+    else
+      redirect '/sessions/new'
+    end
   end
 
   post '/spaces' do
-    space = Space.create(
+    user = User.get(session[:user_id])
+    space = Space.new(
       title: params[:title],
       description: params[:description],
       price: params[:price].to_i,
       location: params[:location]
     )
-    space.save
     img = Photo.create(
       image: params[:image]
     )
-    img.save
     space.photos << img
-    space.save
+    user.spaces << space
+    user.save!
     redirect '/spaces'
   end
 
@@ -56,9 +60,13 @@ class App < Sinatra::Base
   end
 
   get '/spaces' do
-    @spaces = Space.all
-    @photos = Photo.all
-    erb :'spaces/index'
+    if current_user
+      @spaces = Space.all
+      @photos = Photo.all
+      erb :'spaces/index'
+    else
+      redirect '/sessions/new'
+    end
   end
 
 

@@ -63,7 +63,7 @@ class App < Sinatra::Base
 
   get '/api/spaces' do
     content_type :json
-    { info: Space.all }.to_json
+    { info: Space.all, photo: Photo.all }.to_json
   end
 
   get '/users/new' do

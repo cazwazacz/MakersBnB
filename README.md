@@ -33,7 +33,7 @@ I would like them to be stored in a database
 
 As a host
 So I can better advertise my space
-I want to upload pictures of my space
+I want to upload links to pictures of my space
 
 As a user
 So I can rent or list my own space
@@ -46,6 +46,15 @@ I want to sign out
 As a user
 So I can access my bookings and listings
 I want to sign in
+
+As a system adminstrator
+So that I can ensure guest safety
+I would liket to ensure that only registered users can add a space
+
+As a system adminstrator
+So that I know who to notify when a booking is created
+I would like to ensure that only registered users can make a booking
+
 ```
 Space CRC card:
 

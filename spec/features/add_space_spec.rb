@@ -6,6 +6,7 @@ feature 'Allow user to add a new space' do
     expect(page).to have_field('description')
     expect(page).to have_field('price')
     expect(page).to have_field('location')
+    expect(page).to have_field('image_url')
     expect(page).to have_button('Add space')
   end
 

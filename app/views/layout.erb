@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>nightmAirbnb</title>
-    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="/css/master.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   </head>
   <body>
@@ -14,8 +14,8 @@
         <input class="session-button" type="submit" value="Sign Out">
       </form>
       <% else %>
-      <a href="/users/new"><button class="session-button" type="button">Sign Up</button></a>
-      <a href="/sessions/new"><button class="session-button" type="button">Sign In</button></a>
+        <a href="/users/new"><button class="session-button" type="button">Sign Up</button></a>
+        <a href="/sessions/new"><button class="session-button" type="button">Sign In</button></a>
       <% end %>
     </div>
     <%= yield %>

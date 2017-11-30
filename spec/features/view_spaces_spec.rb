@@ -25,3 +25,12 @@ feature 'Viewing all spaces' do
     expect(page).to have_content('Unavailable')
   end
 end
+
+feature 'Filtering spaces' do
+  scenario 'Render filter fields and button' do
+    visit '/spaces'
+    expect(page).to have_field('price-filter')
+    expect(page).to have_field('location-filter')
+    expect(page).to have_button('Filter')
+  end
+end

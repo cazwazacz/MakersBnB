@@ -34,7 +34,8 @@ class App < Sinatra::Base
     space = Space.create(
       title: params[:title],
       description: params[:description],
-      price: params[:price].to_i
+      price: params[:price].to_i,
+      location: params[:location]
     )
     space.save
     img = Photo.create(

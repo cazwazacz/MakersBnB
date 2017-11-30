@@ -13,6 +13,7 @@ feature 'Allowing user to choose to list or book' do
   end
 
   scenario 'Choosing to book takes the user to spaces page' do
+    sign_up_and_sign_in
     visit '/'
     click_link('book-link')
     expect(page.current_path).to eq('/spaces')

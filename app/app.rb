@@ -59,9 +59,13 @@ class App < Sinatra::Base
   end
 
   get '/spaces' do
-    @spaces = Space.all
-    @photos = Photo.all
-    erb :'spaces/index'
+    if current_user
+      @spaces = Space.all
+      @photos = Photo.all
+      erb :'spaces/index'
+    else
+      redirect '/sessions/new'
+    end
   end
 
 

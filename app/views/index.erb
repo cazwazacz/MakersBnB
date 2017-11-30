@@ -5,7 +5,7 @@
     <% else %>
     <h1 class="welcome-message">welcome to nightmAirbnb</h1>
     <% end %>
-    <%= flash[:goodbye] %>
+    <p id="goodbye-message"> <%= flash[:goodbye] %></p>
     <div class="list-book-buttons">
       <a id="list-link" href="/spaces/new"><button class="index-button" type="button">List</button></a>
       <a id="book-link" href="/spaces"><button class="index-button" type="button">Book</button></a>

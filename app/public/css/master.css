@@ -92,3 +92,11 @@ html, body, button {
   width: 100%;
   display: inline-block;
 }
+
+#goodbye-message {
+  text-align: center;
+  font-size: 1.5em;
+  color: #fff;
+  width: 100%;
+  margin-bottom: 50px;
+}

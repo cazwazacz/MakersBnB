@@ -10,9 +10,6 @@ gem 'rake'
 gem 'rubocop'
 gem 'sinatra'
 gem 'sinatra-flash'
-gem 'carrierwave'
-gem 'carrierwave-datamapper'
-gem 'haml'
 
 group :test do
   gem 'capybara'

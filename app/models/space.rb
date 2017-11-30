@@ -6,9 +6,9 @@ class Space
   property :description, Text
   property :price, Integer
   property :location, String
+  property :image_url, Text
   property :available?, Boolean, :default => true
 
-  has n, :photos
   has n, :bookings
   belongs_to :user
 

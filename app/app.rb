@@ -2,12 +2,7 @@ ENV['RACK_ENV'] ||= 'development'
 
 require 'sinatra/base'
 require 'sinatra/flash'
-require 'carrierwave'
 require './app/data_mapper_setup'
-
-CarrierWave.configure do |config|
-  config.root = File.dirname(__FILE__) + "/public"
-end
 
 class App < Sinatra::Base
   enable :sessions
@@ -40,12 +35,9 @@ class App < Sinatra::Base
       title: params[:title],
       description: params[:description],
       price: params[:price].to_i,
-      location: params[:location]
+      location: params[:location],
+      image_url: params[:image_url]
     )
-    img = Photo.create(
-      image: params[:image]
-    )
-    space.photos << img
     user.spaces << space
     user.save!
     redirect '/spaces'
@@ -62,7 +54,6 @@ class App < Sinatra::Base
   get '/spaces' do
     if current_user
       @spaces = Space.all
-      @photos = Photo.all
       erb :'spaces/index'
     else
       redirect '/sessions/new'
@@ -72,7 +63,7 @@ class App < Sinatra::Base
 
   get '/api/spaces' do
     content_type :json
-    { info: Space.all, photo: Photo.all }.to_json
+    { info: Space.all }.to_json
   end
 
   get '/users/new' do

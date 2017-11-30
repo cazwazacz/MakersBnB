@@ -1,6 +1,14 @@
-<% if current_user %>
-  <h1>Welcome to nightmAirbnb, <%= current_user.name %></h1>
-<% end %>
-<%= flash[:goodbye] %>
-<a id="list-link" href="/spaces/new"><button type="button">List</button></a>
-<a id="book-link" href="/spaces"><button type="button">Book</button></a>
+<div id="index-background">
+  <div class="overlay">
+    <% if current_user %>
+    <h1 class="welcome-message">welcome to nightmAirbnb, <%= current_user.name %></h1>
+    <% else %>
+    <h1 class="welcome-message">welcome to nightmAirbnb</h1>
+    <% end %>
+    <%= flash[:goodbye] %>
+    <div class="list-book-buttons">
+      <a id="list-link" href="/spaces/new"><button class="index-button" type="button">List</button></a>
+      <a id="book-link" href="/spaces"><button class="index-button" type="button">Book</button></a>
+    </div>
+  </div>
+</div>

@@ -35,18 +35,18 @@ class App < Sinatra::Base
   end
 
   post '/spaces' do
-    space = Space.create(
+    user = User.get(session[:user_id])
+    space = Space.new(
       title: params[:title],
       description: params[:description],
       price: params[:price].to_i
     )
-    space.save
     img = Photo.create(
       image: params[:image]
     )
-    img.save
     space.photos << img
-    space.save
+    user.spaces << space
+    user.save!
     redirect '/spaces'
   end
 

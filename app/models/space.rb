@@ -9,6 +9,7 @@ class Space
 
   has n, :photos
   has n, :bookings
+  belongs_to :user
 
   def toggle_availability
     self.update(available: !self.available?)

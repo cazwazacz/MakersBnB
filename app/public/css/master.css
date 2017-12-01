@@ -8,7 +8,7 @@ html, body {
   margin: 0px;
 }
 
-.welcome-message {
+#welcome-message {
   margin-top: 150px;
   font-size: 5em;
   text-align: center;
@@ -107,7 +107,6 @@ html, body {
   background-image: url('/assets/sign-up-background.jpg');
   height: 100%;
   width: 100%;
-  display: inline-block;
 }
 
 #sign-up-title {
@@ -125,7 +124,7 @@ html, body {
 }
 
 .user-field {
-  color: rgb(71, 71, 71);
+  color: rgb(122, 122, 122);
   font-size: 0.65em;
   padding-left: 10px;
   padding-top: 5px;
@@ -170,4 +169,28 @@ html, body {
   height: 100%;
   width: 100%;
   display: inline-block;
+}
+
+#sign-in-title {
+  padding-top: 50px;
+  font-size: 5em;
+  text-align: center;
+  color: white;
+}
+
+#sign-in-button {
+  background-color: white;
+  color: rgb(0, 10, 142);
+  border: none;
+  border-radius: 0px;
+  width: 200px;
+  font-size: 2em;
+  padding: 15px 30px;
+  text-transform: lowercase;
+  transition: 0.3s;
+}
+
+#sign-in-button:hover {
+  background-color: rgb(0, 1, 68);
+  color: white;
 }

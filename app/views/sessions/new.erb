@@ -1,9 +1,10 @@
-<div id="sign-in-background">
+<div class="background-set-up" id="sign-in-background">
   <div class="overlay">
+    <h1 id="sign-in-title"> sign-in to nightmAirbnb...</h1>
     <form class="user-form" action="/sessions" method="post">
-      <input class="user-field" type="text" name="username">
-      <input class="user-field"type="password" name="password">
-      <input type="submit" value="let's go">
+      <input class="user-field" type="text" name="username" placeholder="what's your username?">
+      <input class="user-field"type="password" name="password" placeholder="and your password?">
+      <input id="sign-in-button" type="submit" value="let's go">
     </form>
 
     <%= flash[:error] %>

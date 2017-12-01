@@ -60,7 +60,7 @@ html, body {
 
 .nav-bar {
   background-color: rgba(0,0,0,0);
-  position: fixed;
+  position: sticky;
   width: 100%;
   padding-top: 15px;
 }
@@ -264,6 +264,7 @@ html, body {
 .space-title {
   font-weight: bold;
   font-size: 1.2em;
+  margin-top: 0px;
 }
 
 #spaces-div {
@@ -308,6 +309,7 @@ html, body {
   width: 100%;
   font-size: 1.3em;
   padding: 5px 20px;
+  text-transform: lowercase;
   transition: 0.3s;
 }
 

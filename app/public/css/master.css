@@ -117,14 +117,14 @@ html, body, button {
   color: white;
 }
 
-#sign-up-form {
+.user-form {
   text-align: center;
   display: inline-block;
   margin: auto;
   width: 100%;
 }
 
-.sign-up-field {
+.user-field {
   color: rgb(71, 71, 71);
   font-size: 0.65em;
   padding-left: 10px;
@@ -160,4 +160,14 @@ html, body, button {
 #sign-up-button:hover {
   background-color: rgb(0, 1, 68);
   color: white;
+}
+
+#sign-in-background {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url('/assets/sign-in-background.jpg');
+  height: 100%;
+  width: 100%;
+  display: inline-block;
 }

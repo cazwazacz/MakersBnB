@@ -3,15 +3,21 @@
   <head>
     <meta charset="utf-8">
     <title>nightmAirbnb</title>
-    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="/css/master.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   </head>
   <body>
-    <% if current_user %>
+    <div class="nav-bar">
+      <% if current_user %>
       <form action="/sessions" method="post">
         <input type="hidden" name="_method" value="delete">
-        <input type="submit" value="Sign Out">
+        <input class="session-button" type="submit" value="Sign Out">
       </form>
-    <% end %>
+      <% else %>
+        <a href="/users/new"><button class="session-button" type="button">Sign Up</button></a>
+        <a href="/sessions/new"><button class="session-button" type="button">Sign In</button></a>
+      <% end %>
+    </div>
     <%= yield %>
     <script type="text/javascript" src="lib/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="script.js"></script>

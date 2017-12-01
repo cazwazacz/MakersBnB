@@ -1,3 +1,125 @@
 .hidden-button {
   display: none;
 }
+
+html, body, button {
+  height: 100%;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0px;
+}
+
+.welcome-message {
+  margin-top: 150px;
+  font-size: 5em;
+  text-align: center;
+  color: white;
+}
+
+.list-book-buttons {
+  margin: auto;
+  width: 100%;
+}
+
+.index-button {
+  background-color: white;
+  color: rgb(0, 10, 142);
+  border: none;
+  border-radius: 0px;
+  width: 150px;
+  font-size: 2em;
+  padding: 15px 30px;
+  text-transform: lowercase;
+  transition: 0.3s;
+}
+
+.index-button:hover {
+  background-color: rgb(0, 1, 68);
+  color: white;
+}
+
+.session-button {
+  height: auto;
+  display: inline-block;
+  float: right;
+  margin-right: 15px;
+  background-color: white;
+  color: rgb(0, 10, 142);
+  border: none;
+  border-radius: 0px;
+  font-size: 1.2em;
+  text-transform: lowercase;
+  padding: 5px 5px;
+  width: 100px;
+  transition: 0.3s;
+}
+
+.session-button:hover {
+  background-color: rgb(0, 1, 68);
+  color: white;
+}
+
+.nav-bar {
+  background-color: rgba(0,0,0,0);
+  position: fixed;
+  width: 100%;
+  padding-top: 15px;
+}
+
+#list-link {
+  float: left;
+  margin-left: 30%;
+}
+
+#book-link {
+  float: right;
+  margin-right: 30%;
+}
+
+#index-background {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url('/assets/index-background.jpg');
+  height: 100%;
+  width: 100%;
+  display: inline-block;
+}
+
+.overlay {
+  background-color: rgba(0,0,0,0.4);
+  height: 100%;
+  width: 100%;
+  display: inline-block;
+}
+
+#goodbye-message {
+  text-align: center;
+  font-size: 1.5em;
+  color: #fff;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+#sign-up-background {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url('/assets/sign-up-background.jpg');
+  height: 100%;
+  width: 100%;
+  display: inline-block;
+}
+
+#sign-up-form {
+  text-align: center;
+  display: inline-block;
+  margin: auto;
+  width: 100%;
+}
+
+.sign-up-field {
+  display: block;
+  margin: 40px auto 40px auto;
+  border: 0px;
+  font-size: 2em;
+}

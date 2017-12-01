@@ -3,7 +3,7 @@
     <% if current_user %>
     <h1 id="welcome-message">welcome to nightmAirbnb, <%= current_user.name %></h1>
     <% else %>
-    <h1 class="welcome-message">welcome to nightmAirbnb</h1>
+    <h1 id="welcome-message">welcome to nightmAirbnb</h1>
     <% end %>
     <p id="goodbye-message"> <%= flash[:goodbye] %></p>
     <div class="list-book-buttons">

@@ -14,8 +14,10 @@
         <input class="session-button" type="submit" value="Sign Out">
       </form>
       <form action="/users/<%=current_user.id%>">
-        <input type="submit" value="My Dashboard">
+        <input class="dashboard-button" type="submit" value="My Dashboard">
       </form>
+      <a href="/spaces"><button class="session-button" type="button">book</button></a>
+      <a href="/spaces/new"><button class="session-button" type="button">List</button></a>
       <% else %>
       <a href="/users/new"><button class="session-button" type="button">Sign Up</button></a>
       <a href="/sessions/new"><button class="session-button" type="button">Sign In</button></a>

@@ -6,7 +6,7 @@ feature 'Allowing a user to sign up to nightmAirbnb' do
     expect(page).to have_field 'username'
     expect(page).to have_field 'password'
     expect(page).to have_field 'password_confirmation'
-    expect(page).to have_button 'Sign Up'
+    expect(page).to have_button "let's go"
   end
 
   scenario 'User is greeted after signing up' do

@@ -9,7 +9,7 @@ end
 
 def create_space_and_book
   create_space('Hogwarts', 'Edinburgh', 2000)
-  click_button('Book')
+  click_button('book')
 end
 
 def attempt_sign_up(email, username, password, password_confirmation)

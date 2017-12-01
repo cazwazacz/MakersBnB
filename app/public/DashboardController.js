@@ -33,14 +33,15 @@ $(document).ready(function() {
 
   $(document).on('click', ".availability-button", function () {
     var id = ($(this).attr('id')).split("-").pop();
+    var button = $(this);
     $.post('/spaces/'+id+'/toggle_availability', function() {
+      if (button.text() === "Make Available") {
+        button.text("Make Unavailable")
+        $("#availability-status-div-" + id).text("Available")
+      } else {
+        button.text("Make Available")
+        $("#availability-status-div-" + id).text("Unavailable")
+      }
     });
-    if ($(this).text() === "Make Available") {
-      $(this).text("Make Unavailable")
-      $("#availability-status-div-" + id).text("Available")
-    } else {
-      $(this).text("Make Available")
-      $("#availability-status-div-" + id).text("Unavailable")
-    }
   })
 })

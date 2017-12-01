@@ -2,6 +2,18 @@ $(document).ready(function() {
   var pathname = window.location.pathname;
   var userId = pathname.split('/').pop();
 
+  updateButton = function(id, button) {
+    $.get('/api/spaces', function(spaces) {
+      if(spaces.info[id-1].available === true) {
+        button.text("Make Unavailable")
+        $("#availability-status-div-" + id).text("Available")
+      } else {
+        button.text("Make Available")
+        $("#availability-status-div-" + id).text("Unavailable")
+      }
+    })
+  }
+
   $.get('/api/users/' + userId, function(data) {
     data.spaces.forEach(function(space) {
       $('#spaces').append('<a href="/spaces/'+space.id+'">'+'<div>' + space.title + '</div></a>');
@@ -35,13 +47,7 @@ $(document).ready(function() {
     var id = ($(this).attr('id')).split("-").pop();
     var button = $(this);
     $.post('/spaces/'+id+'/toggle_availability', function() {
-      if (button.text() === "Make Available") {
-        button.text("Make Unavailable")
-        $("#availability-status-div-" + id).text("Available")
-      } else {
-        button.text("Make Available")
-        $("#availability-status-div-" + id).text("Unavailable")
-      }
-    });
-  })
+      updateButton(id, button)
+    })
+  });
 })

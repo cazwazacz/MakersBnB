@@ -43,11 +43,15 @@ class App < Sinatra::Base
     redirect '/spaces'
   end
 
-  post '/spaces/:id/update_availability' do
+  post '/spaces/:id/request_booking' do
     space = Space.get(params[:id])
     space.toggle_availability
-    space.bookings << Booking.create
-    space.save
+    booking = Booking.create
+    space.bookings << booking
+    space.save!
+    user = User.get(session[:user_id])
+    user.bookings << booking
+    user.save!
     200
   end
 

@@ -31,6 +31,7 @@ end
 
 feature 'Filtering spaces' do
   scenario 'Render filter fields and button' do
+    sign_up_and_sign_in
     visit '/spaces'
     expect(page).to have_field('price-filter')
     expect(page).to have_field('location-filter')

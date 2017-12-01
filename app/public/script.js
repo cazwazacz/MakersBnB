@@ -53,7 +53,7 @@ $(document).ready(function() {
   $(document).on('click', ".book-button", function () {
     $(this).hide();
     var id = ($(this).attr('id')).split("-").pop();
-    $.post('/spaces/'+id+'/update_availability', function() {
+    $.post('/spaces/'+id+'/request_booking', function() {
       $("#space-"+id).append('Unavailable');
     });
   })

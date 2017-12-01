@@ -110,16 +110,64 @@ html, body, button {
   display: inline-block;
 }
 
-#sign-up-form {
+#sign-up-title {
+  padding-top: 50px;
+  font-size: 5em;
+  text-align: center;
+  color: white;
+}
+
+.user-form {
   text-align: center;
   display: inline-block;
   margin: auto;
   width: 100%;
 }
 
-.sign-up-field {
+.user-field {
+  color: rgb(71, 71, 71);
+  font-size: 0.65em;
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   display: block;
   margin: 40px auto 40px auto;
   border: 0px;
   font-size: 2em;
+  box-shadow: 0px 0px 50px rgb(198, 198, 198);
+}
+
+::-webkit-input-placeholder {
+  color: rgb(198, 198, 198);
+  font-size: 0.65em;
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+#sign-up-button {
+  background-color: white;
+  color: rgb(0, 10, 142);
+  border: none;
+  border-radius: 0px;
+  width: 200px;
+  font-size: 2em;
+  padding: 15px 30px;
+  text-transform: lowercase;
+  transition: 0.3s;
+}
+
+#sign-up-button:hover {
+  background-color: rgb(0, 1, 68);
+  color: white;
+}
+
+#sign-in-background {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url('/assets/sign-in-background.jpg');
+  height: 100%;
+  width: 100%;
+  display: inline-block;
 }

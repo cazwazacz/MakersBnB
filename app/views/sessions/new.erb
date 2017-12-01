@@ -1,7 +1,9 @@
-<form action="/sessions" method="post">
-  <input type="text" name="username">
-  <input type="password" name="password">
-  <input type="submit" value="Sign In">
-</form>
+<div id="sign-in-background">
+  <form class="user-form" action="/sessions" method="post">
+    <input class="user-field" type="text" name="username">
+    <input class="user-field"type="password" name="password">
+    <input type="submit" value="let's go">
+  </form>
 
-<%= flash[:error] %>
+  <%= flash[:error] %>
+</div>

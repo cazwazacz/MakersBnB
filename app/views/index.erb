@@ -1,7 +1,7 @@
-<div id="index-background">
+<div class="background-set-up" id="index-background">
   <div class="overlay">
     <% if current_user %>
-    <h1 class="welcome-message">welcome to nightmAirbnb, <%= current_user.name %></h1>
+    <h1 id="welcome-message">welcome to nightmAirbnb, <%= current_user.name %></h1>
     <% else %>
     <h1 class="welcome-message">welcome to nightmAirbnb</h1>
     <% end %>

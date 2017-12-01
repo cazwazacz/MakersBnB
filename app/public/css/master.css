@@ -8,7 +8,12 @@ html, body {
   margin: 0px;
 }
 
-.welcome-message {
+.background {
+  position: relative;
+  height: 100%;
+}
+
+#welcome-message {
   margin-top: 150px;
   font-size: 5em;
   text-align: center;
@@ -60,7 +65,7 @@ html, body {
 
 .nav-bar {
   background-color: rgba(0,0,0,0);
-  position: sticky;
+  position: fixed;
   width: 100%;
   padding-top: 15px;
 }
@@ -83,6 +88,7 @@ html, body {
   height: 100%;
   width: 100%;
   display: inline-block;
+  background-attachment: fixed;
 }
 
 .overlay {
@@ -107,7 +113,8 @@ html, body {
   background-image: url('/assets/sign-up-background.jpg');
   height: 100%;
   width: 100%;
-  display: inline-block;
+  position: sticky;
+  background-attachment: fixed;
 }
 
 #sign-up-title {
@@ -170,4 +177,5 @@ html, body {
   height: 100%;
   width: 100%;
   display: inline-block;
+  background-attachment: fixed;
 }

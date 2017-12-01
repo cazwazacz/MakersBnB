@@ -19,7 +19,7 @@ def attempt_sign_up(email, username, password, password_confirmation)
   fill_in('username', with: username)
   fill_in('password', with: password)
   fill_in('password_confirmation', with: password_confirmation)
-  click_button("let's go")
+  click_button('let\'s go')
 end
 
 def sign_up_and_sign_in
@@ -27,7 +27,7 @@ def sign_up_and_sign_in
   visit('/sessions/new')
   fill_in('username', with: 'gaby')
   fill_in('password', with: '123')
-  click_button 'Sign In'
+  click_button('let\'s go')
 end
 
 def create_many_spaces

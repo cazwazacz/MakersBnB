@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
   var pathname = window.location.pathname;
   var userId = pathname.split('/').pop();
 

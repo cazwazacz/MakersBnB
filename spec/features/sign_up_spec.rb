@@ -11,7 +11,7 @@ feature 'Allowing a user to sign up to nightmAirbnb' do
 
   scenario 'User is greeted after signing up' do
     attempt_sign_up('allan@gmail.com', 'cazwazacz', 'hello1234', 'hello1234')
-    expect(page).to have_content('Welcome to nightmAirbnb, Allan')
+    expect(page).to have_content('welcome to nightmAirbnb, Allan')
   end
 
   scenario 'User stays on same page if passwords do not match' do

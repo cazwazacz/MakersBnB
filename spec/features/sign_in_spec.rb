@@ -12,8 +12,8 @@ feature 'Allowing user to sign in' do
     visit '/sessions/new'
     fill_in('username', with: 'cazwazacz')
     fill_in('password', with: 'hello123')
-    click_button('Sign In')
-    expect(page).to have_content('Welcome to nightmAirbnb, Allan')
+    click_button('let\'s go')
+    expect(page).to have_content('welcome to nightmAirbnb, Allan')
   end
 
   scenario 'Page informs user of error when password is incorrect' do
@@ -22,7 +22,7 @@ feature 'Allowing user to sign in' do
     visit '/sessions/new'
     fill_in('username', with: 'cazwazacz')
     fill_in('password', with: 'hello1234')
-    click_button('Sign In')
+    click_button('let\'s go')
     expect(page).to have_content('Username or password is not correct')
   end
 
@@ -32,7 +32,7 @@ feature 'Allowing user to sign in' do
     visit '/sessions/new'
     fill_in('username', with: 'cazwazacz123')
     fill_in('password', with: 'hello123')
-    click_button('Sign In')
+    click_button('let\'s go')
     expect(page).to have_content('Username or password is not correct')
   end
 end

@@ -59,6 +59,9 @@ As a user
 So that I can access all my information from nightmAirbnb easily,
 I would like to see all of my bookings and sapces information on one page.
 
+As a host,
+So that I can get multiple booking requests
+I would like to make my space available again.
 ```
 Space CRC card:
 

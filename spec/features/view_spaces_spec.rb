@@ -14,15 +14,15 @@ feature 'Viewing all spaces' do
   scenario 'Hiding the book button when space is not available' do
     sign_up_and_sign_in
     create_space('Hogwarts', 'A lovely old castle in Edinburgh', 2000)
-    click_button('Book')
+    click_button('book')
     visit '/spaces'
-    expect(page).not_to have_button('Book')
+    expect(page).not_to have_button('book')
   end
 
   scenario 'Display "unavailable" when a space is booked' do
     sign_up_and_sign_in
     create_space('Hogwarts', 'A lovely old castle in Edinburgh', 2000)
-    click_button('Book')
+    click_button('book')
     sleep 1
     visit '/spaces'
     expect(page).to have_content('Unavailable')

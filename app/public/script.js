@@ -1,10 +1,10 @@
 $(document).ready(function() {
 
   displaySpaces = function(information, i) {
-    $("#info").append('<div id=space-' + information.info[i].id + '>' + information.info[i].title + information.info[i].description + information.info[i].price + information.info[i].location + '</div>')
-    $("#space-" + information.info[i].id).append('<img src=' + information.info[i].image_url + '>');
+    $("#info").append('<div class="spaces-st" id=space-' + information.info[i].id + '>' + '<div class="space-title">'+information.info[i].title +'</div><div class="space-description">' + information.info[i].description+'</div><div class="space-price">¥' + information.info[i].price +'</div><div class="space-location">'+ information.info[i].location + '</div></div>')
+    $("#space-" + information.info[i].id).append('<img class="img-st" src=' + information.info[i].image_url + '>');
     if(information.info[i].available) {
-      $("#space-" + information.info[i].id).append('<button class="book-button" id=book-button-' + information.info[i].id + ' type="button"> Book </button>')
+      $("#space-" + information.info[i].id).append('<button class="book-button" id=book-button-' + information.info[i].id + ' type="button"> book </button>')
     } else {
       $("#space-" + information.info[i].id).append(' Unavailable')
     }

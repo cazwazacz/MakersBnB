@@ -7,10 +7,10 @@ $(document).ready(function() {
       $('#spaces').append('<a href="/spaces/'+space.id+'">'+'<div>' + space.title + '</div></a>');
       var status;
       space.available ? status = "Available" : status = "Unavailable";
-      $('#spaces').append(status)
+      $('#spaces').append('<div id="availability-status-div-' + space.id + '"> ' + status + '</div>')
       var statusButton;
       space.available ? statusButton = "Unavailable" : statusButton = "Available";
-      $('#spaces').append('<form action="/spaces/'+ space.id + '/toggle_availability" method="post"> <input type="submit" value="Make ' + statusButton +'"></form>')
+      $('#spaces').append('<button class="availability-button" id="availability-' + space.id +'"> Make ' + statusButton + '</button>')
     })
     data.requests.forEach(function(request) {
       if(request.length !== 0) {
@@ -29,5 +29,18 @@ $(document).ready(function() {
         $('#bookings').append('<div>'+spaceTitle+' '+booking.booking_status+'</div>');
       })
     })
+  })
+
+  $(document).on('click', ".availability-button", function () {
+    var id = ($(this).attr('id')).split("-").pop();
+    $.post('/spaces/'+id+'/toggle_availability', function() {
+    });
+    if ($(this).text() === "Make Available") {
+      $(this).text("Make Unavailable")
+      $("#availability-status-div-" + id).text("Available")
+    } else {
+      $(this).text("Make Available")
+      $("#availability-status-div-" + id).text("Unavailable")
+    }
   })
 })

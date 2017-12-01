@@ -195,7 +195,36 @@ html, body {
   color: white;
 }
 
+#add-space-background {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url('/assets/add-space-background.jpg');
+  height: 100%;
+  width: 100%;
+  display: inline-block;
+}
+
+#add-space-button {
+  background-color: white;
+  color: rgb(0, 10, 142);
+  border: none;
+  border-radius: 0px;
+  width: 200px;
+  font-size: 2em;
+  padding: 15px 30px;
+  text-transform: lowercase;
+  transition: 0.3s;
+}
+
 #add-space-button:hover {
   background-color: rgb(0, 1, 68);
+  color: white;
+}
+
+#add-space-title {
+  padding-top: 50px;
+  font-size: 5em;
+  text-align: center;
   color: white;
 }

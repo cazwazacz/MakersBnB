@@ -19,7 +19,7 @@ def attempt_sign_up(email, username, password, password_confirmation)
   fill_in('username', with: username)
   fill_in('password', with: password)
   fill_in('password_confirmation', with: password_confirmation)
-  click_button('Sign Up')
+  click_button("let's go")
 end
 
 def sign_up_and_sign_in
@@ -28,4 +28,11 @@ def sign_up_and_sign_in
   fill_in('username', with: 'gaby')
   fill_in('password', with: '123')
   click_button 'Sign In'
+end
+
+def create_many_spaces
+  create_space('Hogwarts', 'A lovely old castle in Edinburgh', 2000)
+  create_space('Nandos', 'Extra cheeky', 1234)
+  create_space('Taj Mahal', 'The best casino in Las Vegas', 982380)
+  create_space('Dracula Castle', 'Have extra blood? Come to Transylvania!', 4)
 end

@@ -13,6 +13,9 @@
         <input type="hidden" name="_method" value="delete">
         <input class="session-button" type="submit" value="Sign Out">
       </form>
+      <form action="/users/<%=current_user.id%>">
+        <input type="submit" value="My Dashboard">
+      </form>
       <% else %>
         <a href="/users/new"><button class="session-button" type="button">Sign Up</button></a>
         <a href="/sessions/new"><button class="session-button" type="button">Sign In</button></a>

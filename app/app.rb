@@ -74,6 +74,17 @@ class App < Sinatra::Base
     erb :'users/new'
   end
 
+  get '/users/:id' do
+    user = User.get(session[:user_id])
+    erb :'users/my_dashboard'
+  end
+
+  get '/api/users/:id' do
+    content_type :json
+    user = User.get(params[:id])
+    { spaces: user.spaces, bookings: user.bookings, requests: user.spaces.map(&:bookings) }.to_json
+  end
+
   post '/users' do
     @new_user = User.create(
       name: params[:name],

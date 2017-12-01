@@ -55,6 +55,10 @@ As a system adminstrator
 So that I know who to notify when a booking is created
 I would like to ensure that only registered users can make a booking
 
+As a user
+So that I can access all my information from nightmAirbnb easily,
+I would like to see all of my bookings and sapces information on one page.
+
 ```
 Space CRC card:
 

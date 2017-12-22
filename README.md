@@ -1,6 +1,6 @@
 # NightmAirbnb
 
-Introduction | Approach | Challenges | Tech Stack | User Stories
+[Introduction](#Introduction) | [Approach](#Approach) | [Challenges](#Challenges) | [Tech Stack](#Tech Stack) | [User Stories](#User Stories)
 
 ## Introduction
 
@@ -14,10 +14,10 @@ We began this task by establishing what our minimum viable product (MVP) would b
 
 ## Challenges
 
-NightmAirbnb was the first challenge that we had worked on as part of a team. As such, it involved a learning curve in using git beyond sicouldmply pulling and pushing: creating branches, merging branches, resolving conflicts (and then, inevitably fixing bugs after it turned out we hadn't resolved conflicts properly...) etc. This also entailed learning how best to parallelise work, as we pursued a series of user stories that were often dependent upon one feature being completed in order to work on the next. This led at times to work stalling, and these bottlenecks could have been avoided had we pursued non-interdependent feature sets, rather than focusing broadly on a single path. 
+NightmAirbnb was the first challenge that we had worked on as part of a team. As such, it involved a learning curve in using git beyond sicouldmply pulling and pushing: creating branches, merging branches, resolving conflicts (and then, inevitably fixing bugs after it turned out we hadn't resolved conflicts properly...) etc. This also entailed learning how best to parallelise work, as we pursued a series of user stories that were often dependent upon one feature being completed in order to work on the next. This led at times to work stalling, and these bottlenecks could have been avoided had we pursued non-interdependent feature sets, rather than focusing broadly on a single path.
 
 
-## Tech stack
+## Tech Stack
 NightmAirbnb was built using the following technologies:
 - HTML
 - CSS
@@ -28,7 +28,7 @@ NightmAirbnb was built using the following technologies:
 - Git
 
 
-## User stories
+## User Stories
 
 User stories are listed below in the order they were implemented.
 

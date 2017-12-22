@@ -1,6 +1,6 @@
 # NightmAirbnb
 
-[Introduction](#introduction) | [Approach](#approach) | [Challenges](#challenges) | [Tech Stack](#tech stack) | [User Stories](#user stories)
+[Introduction](#introduction) | [Approach](#approach) | [Challenges](#challenges) | [Tech Stack](#tech) | [User Stories](#user)
 
 ## Introduction
 

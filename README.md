@@ -1,8 +1,34 @@
 # NightmAirbnb
 
+Introduction | Approach | Challenges | Tech Stack | User Stories
 
-User stories
----
+## Introduction
+
+NightmAirbnb is an implementation of Makers Academy's Week 6 challenge, MakersBnB, the full spec for which can be found [here](https://github.com/makersacademy/course/tree/master/makersbnb). In short, the challenge was to build a clone of as much as possible of Airbnb in a week. [User stories](#user stories) that were succesfully implemented are listed below. The latest deployed version of NightmAirbnb can be found at https://nightmairbnb.herokuapp.com/.
+
+
+## Approach
+
+We began this task by establishing what our minimum viable product (MVP) would be. This is represented by our first four [user stories](#user stories), allowing a user to either list or book a space. From a systems design perspective, we used Class/Responsibility/Collaborator (CRC) cards to map out what models we would need, and how each model would communicate with any other models.
+
+
+## Challenges
+
+NightmAirbnb was the first challenge that we had worked on as part of a team. As such, it involved a learning curve in using git beyond sicouldmply pulling and pushing: creating branches, merging branches, resolving conflicts (and then, inevitably fixing bugs after it turned out we hadn't resolved conflicts properly...) etc. This also entailed learning how best to parallelise work, as we pursued a series of user stories that were often dependent upon one feature being completed in order to work on the next. This led at times to work stalling, and these bottlenecks could have been avoided had we pursued non-interdependent feature sets, rather than focusing broadly on a single path. 
+
+
+## Tech stack
+NightmAirbnb was built using the following technologies:
+- HTML
+- CSS
+- jQuery
+- Sinatra
+- Postgres
+- DataMapper
+- Git
+
+
+## User stories
 
 User stories are listed below in the order they were implemented.
 
@@ -63,23 +89,5 @@ As a host,
 So that I can get multiple booking requests
 I would like to make my space available again.
 ```
-Space CRC card:
 
-| Spaces      |           |   
-| ------------- |:-------------:|
-| Responsibilities:      | Collaborators: |  
-| - Has title      | -     |    
-| - Has description | -     |    
-| - Has price |      - |
-| - Has availability |   -   |
-
-
-Technology used:
-- HTML
-- CSS
-- jQuery
-- Sinatra
-- Postgres
-- DataMapper
-
-NightmAirbnb was created by Allan, Antonio, Gabriela and Peter.
+NightmAirbnb was created by [Allan](https://github.com/cazwazacz), [Antonio](https://github.com/antoniobelmar), [Gabriela](https://github.com/gabrielabud) and [Peter](https://github.com/peterwdj).

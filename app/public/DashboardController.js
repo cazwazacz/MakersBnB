@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
   var pathname = window.location.pathname;
   var userId = pathname.split('/').pop();
 
@@ -24,11 +25,16 @@ $(document).ready(function() {
       space.available ? statusButton = "Unavailable" : statusButton = "Available";
       $('#spaces').append('<button class="availability-button" id="availability-' + space.id +'"> Make ' + statusButton + '</button>')
     })
-    data.requests.forEach(function(request) {
+    data.requests[0].forEach(function(request) {
       if(request.length !== 0) {
-        request_id = request[0].space_id;
-        spaceTitle = data.spaces[request_id - 1].title;
-        $('#requests').append('<div>'+spaceTitle+' '+request[0].booking_status+'</div>');
+        var request_id = request.space_id;
+        var spaceTitle;
+        for(i=0; i< data.spaces.length; i++) {
+          if(data.spaces[i].id === request_id) {
+            spaceTitle = data.spaces[i].title
+          }
+        }
+        $('#requests').append('<div>'+spaceTitle+' '+request.booking_status+'</div>');
       }
     })
   })
